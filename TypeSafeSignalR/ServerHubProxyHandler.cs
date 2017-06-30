@@ -5,7 +5,7 @@ using System.Runtime.Remoting.Messaging;
 using System.Runtime.Remoting.Proxies;
 using Microsoft.AspNet.SignalR.Client;
 
-namespace StreamCentral.Common
+namespace TypeSafeSignalR.Common
 {
     public class ServerHubProxyHandler<T> : RealProxy
     {
@@ -28,7 +28,6 @@ namespace StreamCentral.Common
 
             try
             {
-                Console.WriteLine(method.Name);
                 if (method.ReturnType != typeof(void))
                 {
                     var t = method.ReturnType;//typeof(Task<>).MakeGenericType(new Type[] { method.ReturnType });

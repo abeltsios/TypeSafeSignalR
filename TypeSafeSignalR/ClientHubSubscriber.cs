@@ -5,7 +5,7 @@ using Microsoft.AspNet.SignalR.Client;
 using Microsoft.AspNet.SignalR.Client.Hubs;
 using Newtonsoft.Json.Linq;
 
-namespace StreamCentral.Common
+namespace TypeSafeSignalR.Common
 {
     public static class ClientHubSubscriber<T> where T : class
     {
